@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ADASE</string>
+    <string name="selectRole">Select Role</string>
+    <string name="selectGender">Select Gender</string>
+    <string name="selectStreet">Select Street</string>
+    <string name="selectReport">Report</string>
+    <string name="selectGroup">Choose Your Group</string>
+</resources>

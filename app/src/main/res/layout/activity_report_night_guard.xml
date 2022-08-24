@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor"
+    android:padding="4dp"
+    tools:context=".ReportNightGuard">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NIGHT GUARD REPORT"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:typeface="monospace"
+                android:fontFamily="sans-serif-black"
+                android:textSize="40sp"
+                android:textColor="@color/thirdColor"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"/>
+
+            <Button
+                android:id="@+id/btDateOccur"
+                style="?android:spinnerStyle"
+                android:layout_width="351dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="60dp"
+                android:onClick="openDateOccur"
+                android:text="Occured at "
+                android:textColor="@color/hint"
+                android:textSize="16sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="350dp"
+                android:layout_height="67dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:hint="@string/selectReport"
+                android:textColorHint="@color/hint"
+                app:boxStrokeColor="#FF009688">
+
+                <AutoCompleteTextView
+                    android:id="@+id/acReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="350dp"
+                android:layout_height="67dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:hint="@string/selectStreet"
+                android:textColorHint="@color/hint"
+                app:boxStrokeColor="#FF009688">
+
+                <AutoCompleteTextView
+                    android:id="@+id/acStreet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+
+<!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"-->
+<!--                android:layout_width="350dp"-->
+<!--                android:layout_height="67dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:hint="@string/selectGroup"-->
+<!--                android:textColorHint="@color/hint"-->
+<!--                app:boxStrokeColor="#FF009688">-->
+
+<!--                <AutoCompleteTextView-->
+<!--                    android:id="@+id/acGroup"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:inputType="none"/>-->
+
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textColorHint="@color/hint"
+                app:boxStrokeColor="#FF009688">
+
+                <EditText
+                    android:id="@+id/etNickName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Fullname"
+                    android:textColorHint="@color/black"
+                    android:textColor="@color/black"
+                    android:padding="10dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btSave"
+                android:layout_width="230dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:backgroundTint="#FF018786"
+                android:text="Save"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

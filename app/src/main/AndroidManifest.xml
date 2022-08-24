@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="my.edu.utem.ftmk.adase">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ADASE">
+        <activity
+            android:name=".AgeChart"
+            android:exported="false" />
+        <activity
+            android:name=".ReportNightGuardList"
+            android:exported="false" />
+        <activity
+            android:name=".ReportNightGuard"
+            android:exported="false" />
+        <activity
+            android:name=".CommunityProfile"
+            android:exported="false" />
+        <activity
+            android:name=".UpdateUserAddress"
+            android:exported="false" />
+        <activity
+            android:name=".UpdateUserPhone"
+            android:exported="false" />
+        <activity
+            android:name=".UpdateUserIC"
+            android:exported="false" />
+        <activity
+            android:name=".UpdateUserEmail"
+            android:exported="false" />
+        <activity
+            android:name=".StreetList"
+            android:exported="false" />
+        <activity
+            android:name=".JalanJasmin"
+            android:exported="false" />
+        <activity
+            android:name=".JalanOrkid"
+            android:exported="false" />
+        <activity
+            android:name=".JalanMatahari"
+            android:exported="false" />
+        <activity
+            android:name=".JalanLavendar"
+            android:exported="false" />
+        <activity
+            android:name=".JalanMelur"
+            android:exported="false" />
+        <activity
+            android:name=".UpdateUserName"
+            android:exported="false" />
+        <activity
+            android:name=".CommunityList"
+            android:exported="false" />
+        <activity
+            android:name=".CommitteeList"
+            android:exported="false" />
+        <activity
+            android:name=".UpdateUser"
+            android:exported="false" />
+        <activity
+            android:name=".MenuGroupNightGuard"
+            android:exported="false" />
+        <activity
+            android:name=".MenuNightGuard"
+            android:exported="false" />
+        <activity
+            android:name=".MenuCommunity"
+            android:exported="false" />
+        <activity
+            android:name=".MenuCommittee"
+            android:exported="false" />
+        <activity
+            android:name=".MenuMeeting"
+            android:exported="false" />
+        <activity
+            android:name=".AddCommunity"
+            android:exported="false" />
+        <activity
+            android:name=".GroupD"
+            android:exported="false" />
+        <activity
+            android:name=".GroupC"
+            android:exported="false" />
+        <activity
+            android:name=".GroupB"
+            android:exported="false" />
+        <activity
+            android:name=".GroupA"
+            android:exported="false" />
+        <activity
+            android:name=".MeetingList"
+            android:exported="false" />
+        <activity
+            android:name=".DisplayNewMeeting"
+            android:exported="false" />
+        <activity
+            android:name=".DatePicker"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".FamilyMembers"
+            android:exported="false" />
+        <activity
+            android:name=".UserMenu"
+            android:exported="false" />
+        <activity
+            android:name=".UserProfile"
+            android:exported="false" />
+        <activity
+            android:name=".Register"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+    </application>
+
+</manifest>

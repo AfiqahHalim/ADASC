@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor"
+    tools:context=".Login">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        app:srcCompat="@drawable/logo"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apps for Community Development and Safety Committee"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:textColor="@color/thirdColor"
+        android:textStyle="italic"
+        android:textSize="20dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:textColorHint="@color/black"
+        app:boxStrokeColor="#FFC700">
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:hint="email"
+            android:textColor="@color/black"
+            android:textColorHint="@color/hint"
+            android:textSize="20sp"
+            android:inputType="textEmailSubject"
+            android:background="@drawable/backgroundside"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColorHint="@color/black"
+        app:boxStrokeColor="#FFC700">
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:padding="20dp"
+            android:hint="password"
+            android:textColor="@color/black"
+            android:textColorHint="@color/hint"
+            android:textSize="20sp"
+            android:inputType="textPassword"
+            android:background="@drawable/backgroundside"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btLogin"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:backgroundTint="@color/thirdColor" />
+
+    <TextView
+        android:id="@+id/tvRegister"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Don't have account? Register."
+        android:textAlignment="center"
+        android:textStyle="italic"
+        android:onClick="toRegister"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/tvForgotPassword"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Forgot password?"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        android:layout_marginTop="15dp"/>
+
+
+</LinearLayout>

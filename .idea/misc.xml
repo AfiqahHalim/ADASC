@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/drawable/backgroundgradient.xml" value="0.1275" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/drawable/backgroundside.xml" value="0.1505" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/drawable/ic_baseline.xml" value="0.1" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/drawable/ic_edit.xml" value="0.1905" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/drawable/login_button.xml" value="0.2205" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_add_community.xml" value="0.2" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_age_chart.xml" value="0.1" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_all_meeting_list.xml" value="0.2" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_bs_community_profile.xml" value="0.136" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_bs_post_meeting_report.xml" value="0.25" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_committee_list.xml" value="0.2" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_community_list.xml" value="0.25" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_community_profile.xml" value="0.2" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_date_picker.xml" value="0.264" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_display_meeting.xml" value="0.25" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_display_new_meeting.xml" value="0.264" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_family_members.xml" value="1.330592105263158" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_forgot_password.xml" value="0.2" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_group_a.xml" value="0.25" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_group_b.xml" value="0.25" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_group_c.xml" value="0.25" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_group_d.xml" value="0.25" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_jalan_jasmin.xml" value="0.25" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_jalan_lavendar.xml" value="0.25" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_jalan_matahari.xml" value="0.25" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_jalan_melur.xml" value="0.25" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_jalan_orkid.xml" value="0.25" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_login.xml" value="0.264" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_main2.xml" value="0.2427536231884058" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_meeting_list.xml" value="0.2" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_meeting_menu.xml" value="0.25" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_menu_committee.xml" value="0.25" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_menu_community.xml" value="0.25" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_menu_group_ng.xml" value="0.25" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_menu_group_night_guard.xml" value="0.25" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_menu_meeting.xml" value="0.25" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_menu_night_guard.xml" value="0.25" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_night_guard_group.xml" value="0.25" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_night_guard_menu.xml" value="0.25" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_profile.xml" value="0.25" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_register.xml" value="0.264" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_report_night_guard.xml" value="0.25" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_report_night_guard_list.xml" value="0.23278985507246377" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_street_list.xml" value="0.25" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_time_picker.xml" value="0.25" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_try_error.xml" value="0.2" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_update_user.xml" value="0.22780797101449277" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_update_user_address.xml" value="0.22604166666666667" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_update_user_email.xml" value="0.22604166666666667" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_update_user_ic.xml" value="0.22604166666666667" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_update_user_name.xml" value="0.264" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_update_user_phone.xml" value="0.22604166666666667" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_user_menu.xml" value="0.25" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_user_profile.xml" value="0.264" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/activity_user_profilee.xml" value="0.25" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/committee_row.xml" value="0.25" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/community_row.xml" value="0.25" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/group_row.xml" value="0.25" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/home.xml" value="0.2259963768115942" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/list_role.xml" value="0.2368659420289855" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/meeting_row.xml" value="0.22146739130434784" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/meetinglist.xml" value="0.264" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/nnn.xml" value="0.25" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/report_night_guard_row.xml" value="0.25" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/topbar.xml" value="0.22146739130434784" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/layout/try_error.xml" value="0.2" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASC/app/src/main/res/menu/menu.xml" value="0.24583333333333332" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASE/app/src/main/res/drawable/backgroundgradient.xml" value="0.1" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASE/app/src/main/res/drawable/backgroundside.xml" value="0.1" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASE/app/src/main/res/layout/activity_login.xml" value="0.23478260869565218" />
+        <entry key="..\:/Users/Nur Afiqah/Desktop/ADASE/app/src/main/res/layout/activity_register.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

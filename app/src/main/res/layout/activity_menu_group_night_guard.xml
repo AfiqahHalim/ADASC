@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/mainColor"
+    tools:context=".MenuGroupNightGuard">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        app:srcCompat="@drawable/logo"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Night Guard Group"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        android:textSize="30dp"/>
+
+    <Button
+        android:id="@+id/btGroupA"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#FF018786"
+        android:text="Group A"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btGroupB"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#FF018786"
+        android:text="Group B"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btGroupC"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#FF018786"
+        android:text="Group C"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <!--    <Button-->
+    <!--        android:id="@+id/btNightGuard"-->
+    <!--        android:layout_width="250dp"-->
+    <!--        android:layout_height="70dp"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:layout_marginTop="5dp"-->
+    <!--        android:backgroundTint="#FF018786"-->
+    <!--        android:text="Night Guard"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textStyle="bold" />-->
+
+    <Button
+        android:id="@+id/btGroupD"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#FF018786"
+        android:text="Group D"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btMainMenu"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#FF018786"
+        android:text="Main Menu"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+</LinearLayout>

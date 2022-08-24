@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "316345959685",
+    "project_id": "community-development-n-safety",
+    "storage_bucket": "community-development-n-safety.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:316345959685:android:f06d8f4a16588c798ce36c",
+        "android_client_info": {
+          "package_name": "my.edu.utem.ftmk.adase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "316345959685-rne9hmashtand3f5po5jt05cht85l9m0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-9NmOnV8qPSTSSSGsZkWeBV7G_thzcXE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "316345959685-rne9hmashtand3f5po5jt05cht85l9m0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

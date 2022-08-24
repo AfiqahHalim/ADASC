@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor"
+    android:padding="4dp"
+    tools:context=".UpdateUser">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Update Profile"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/thirdColor"
+                android:textStyle="bold"
+                android:textSize="30dp" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/usr" />
+
+            <EditText
+                android:id="@+id/etUserName"
+                android:layout_width="345dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/thirdColor"
+                android:hint="Name"
+                android:textColor="@color/black"
+                android:textColorHint="@color/hint"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+            <EditText
+                android:id="@+id/etUserIc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="IC Number"
+                android:textColorHint="@color/hint"
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/thirdColor"/>
+
+            <EditText
+                android:id="@+id/etUserPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone Number"
+                android:textColorHint="@color/hint"
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/thirdColor"/>
+
+            <EditText
+                android:id="@+id/etUserEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:textColorHint="@color/hint"
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/thirdColor"/>
+
+            <Button
+                android:id="@+id/btBirthDate"
+                style="?android:spinnerStyle"
+                android:layout_width="378dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:onClick="openUpdateBirthDate"
+                android:text="Select your birth date"
+                android:textColor="@color/hint"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/etUserAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Address"
+                android:textColorHint="@color/hint"
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/thirdColor"/>
+
+            <EditText
+                android:id="@+id/etUserWork"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Work"
+                android:textColorHint="@color/hint"
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/thirdColor"/>
+
+            <Button
+                android:id="@+id/btUpdateUser"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#FF018786"
+                android:text="Update"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

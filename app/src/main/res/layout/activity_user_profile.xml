@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor"
+    android:padding="4dp"
+    tools:context=".UserProfile">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="User Profile"
+                android:textAlignment="center"
+                android:textColor="@color/thirdColor"
+                android:textSize="50dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvNameTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Title"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="45dp"
+                android:text="Full Name          : "
+                android:textAlignment="center"
+                android:textColor="@color/thirdColor"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvEditName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Title"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="48dp"
+                android:layout_toRightOf="@id/tvNameTitle"
+                android:drawableEnd="@drawable/ic_edit"
+                android:drawablePadding="30dp"
+                android:paddingRight="10dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Title"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="40dp"
+                android:layout_toRightOf="@id/tvNameTitle"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvRoleTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvNameTitle"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="45dp"
+                android:text="Role                    : "
+                android:textAlignment="center"
+                android:textColor="@color/thirdColor"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvEditRole"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/tvName"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_marginTop="48dp"-->
+<!--                android:layout_toRightOf="@id/tvRoleTitle"-->
+<!--                android:drawableEnd="@drawable/ic_edit"-->
+<!--                android:drawablePadding="30dp"-->
+<!--                android:paddingRight="10dp"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="15dp"-->
+<!--                android:textStyle="bold" />-->
+
+            <TextView
+                android:id="@+id/tvRole"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvNameTitle"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="48dp"
+                android:layout_toRightOf="@id/tvNameTitle"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvEmailTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvRoleTitle"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="45dp"
+                android:text="Email                  : "
+                android:textAlignment="center"
+                android:textColor="@color/thirdColor"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvEditEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvRole"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="48dp"
+                android:layout_toRightOf="@id/tvRoleTitle"
+                android:drawableEnd="@drawable/ic_edit"
+                android:drawablePadding="30dp"
+                android:paddingRight="10dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvRoleTitle"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="40dp"
+                android:layout_toRightOf="@id/tvNameTitle"
+                android:drawablePadding="30dp"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvICNumTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvEmail"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="45dp"
+                android:text="IC Number         : "
+                android:textAlignment="center"
+                android:textColor="@color/thirdColor"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvEditICNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvEmail"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="48dp"
+                android:layout_toRightOf="@id/tvRoleTitle"
+                android:drawableEnd="@drawable/ic_edit"
+                android:drawablePadding="30dp"
+                android:paddingRight="10dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvICNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvEmail"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="48dp"
+                android:layout_toRightOf="@id/tvEmailTitle"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvPhoneNumTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvICNum"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="45dp"
+                android:text="Phone Number : "
+                android:textAlignment="center"
+                android:textColor="@color/thirdColor"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvEditPhoneNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvICNum"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="48dp"
+                android:layout_toRightOf="@id/tvRoleTitle"
+                android:drawableEnd="@drawable/ic_edit"
+                android:drawablePadding="30dp"
+                android:paddingRight="10dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvPhoneNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvICNum"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="48dp"
+                android:layout_toRightOf="@id/tvEmailTitle"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvAddressTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvPhoneNumTitle"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="45dp"
+                android:text="Address             : "
+                android:textAlignment="center"
+                android:textColor="@color/thirdColor"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvEditAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvPhoneNum"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="48dp"
+                android:layout_toRightOf="@id/tvPhoneNumTitle"
+                android:drawableEnd="@drawable/ic_edit"
+                android:drawablePadding="30dp"
+                android:paddingRight="10dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvPhoneNumTitle"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="40dp"
+                android:layout_toRightOf="@id/tvEmailTitle"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvBirthDateTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvAddressTitle"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="45dp"
+                android:text="Birth Date          : "
+                android:textAlignment="center"
+                android:textColor="@color/thirdColor"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvEditBirthDate"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/tvAddress"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_marginTop="48dp"-->
+<!--                android:layout_toRightOf="@id/tvRoleTitle"-->
+<!--                android:drawableEnd="@drawable/ic_edit"-->
+<!--                android:drawablePadding="30dp"-->
+<!--                android:paddingRight="10dp"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="15dp"-->
+<!--                android:textStyle="bold" />-->
+
+            <TextView
+                android:id="@+id/tvBirthDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvAddressTitle"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="48dp"
+                android:layout_toRightOf="@id/tvEmailTitle"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/btBack"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvBirthDate"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="35dp"
+                android:backgroundTint="#26B6B5"
+                android:text="Back"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

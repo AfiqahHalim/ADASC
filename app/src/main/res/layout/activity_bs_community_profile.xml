@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor"
+    android:padding="4dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Community Profile"
+                android:textAlignment="center"
+                android:textColor="@color/thirdColor"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvNameTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Title"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="60dp"
+                android:text="Name                   : "
+                android:textAlignment="center"
+                android:textColor="@color/thirdColor"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvEditName"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/Title"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_marginTop="60dp"-->
+<!--                android:layout_toRightOf="@id/tvNameTitle"-->
+<!--                android:drawableEnd="@drawable/ic_edit"-->
+<!--                android:drawablePadding="30dp"-->
+<!--                android:paddingRight="10dp"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="15dp"-->
+<!--                android:textStyle="bold" />-->
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Title"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="40dp"
+                android:layout_toRightOf="@id/tvNameTitle"
+                android:drawablePadding="30dp"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvAgeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvNameTitle"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="45dp"
+                android:text="Age                      : "
+                android:textAlignment="center"
+                android:textColor="@color/thirdColor"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvEditAge"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/tvNameTitle"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_marginTop="45dp"-->
+<!--                android:layout_toRightOf="@id/tvAgeTitle"-->
+<!--                android:drawableEnd="@drawable/ic_edit"-->
+<!--                android:drawablePadding="30dp"-->
+<!--                android:paddingRight="10dp"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="15dp"-->
+<!--                android:textStyle="bold" />-->
+
+            <TextView
+                android:id="@+id/tvAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvNameTitle"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginEnd="40dp"
+                android:layout_toRightOf="@id/tvAgeTitle"
+                android:drawablePadding="30dp"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvHouseTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvAgeTitle"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="45dp"
+                android:text="House                 : "
+                android:textAlignment="center"
+                android:textColor="@color/thirdColor"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvEditHouse"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/tvAgeTitle"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_marginTop="45dp"-->
+<!--                android:layout_toRightOf="@id/tvHouseTitle"-->
+<!--                android:drawableEnd="@drawable/ic_edit"-->
+<!--                android:drawablePadding="30dp"-->
+<!--                android:paddingRight="10dp"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="15dp"-->
+<!--                android:textStyle="bold" />-->
+
+            <TextView
+                android:id="@+id/tvHouse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvAgeTitle"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginEnd="40dp"
+                android:layout_toRightOf="@id/tvHouseTitle"
+                android:drawablePadding="30dp"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvStreetTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvHouseTitle"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="45dp"
+                android:text="Street                  : "
+                android:textAlignment="center"
+                android:textColor="@color/thirdColor"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvEditStreet"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/tvHouseTitle"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_marginTop="45dp"-->
+<!--                android:layout_toRightOf="@id/tvStreetTitle"-->
+<!--                android:drawableEnd="@drawable/ic_edit"-->
+<!--                android:drawablePadding="30dp"-->
+<!--                android:paddingRight="10dp"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="15dp"-->
+<!--                android:textStyle="bold" />-->
+
+            <TextView
+                android:id="@+id/tvStreet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvHouseTitle"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginEnd="40dp"
+                android:layout_toRightOf="@id/tvStreetTitle"
+                android:drawablePadding="30dp"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvGenderTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvStreetTitle"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="45dp"
+                android:text="Gender                : "
+                android:textAlignment="center"
+                android:textColor="@color/thirdColor"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvStreetTitle"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginEnd="40dp"
+                android:layout_toRightOf="@id/tvGenderTitle"
+                android:drawablePadding="30dp"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvPhoneTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvGenderTitle"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="45dp"
+                android:text="Phone                  : "
+                android:textAlignment="center"
+                android:textColor="@color/thirdColor"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvEditPhone"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/tvGenderTitle"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_marginTop="45dp"-->
+<!--                android:layout_toRightOf="@id/tvPhoneTitle"-->
+<!--                android:drawableEnd="@drawable/ic_edit"-->
+<!--                android:drawablePadding="30dp"-->
+<!--                android:paddingRight="10dp"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="15dp"-->
+<!--                android:textStyle="bold" />-->
+
+            <TextView
+                android:id="@+id/tvPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvGenderTitle"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginEnd="40dp"
+                android:layout_toRightOf="@id/tvPhoneTitle"
+                android:drawablePadding="30dp"
+                android:text="hello"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvWorkTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvPhoneTitle"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="45dp"
+                android:text="Work                    : "
+                android:textAlignment="center"
+                android:textColor="@color/thirdColor"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvEditWork"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/tvPhoneTitle"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_marginTop="45dp"-->
+<!--                android:layout_toRightOf="@id/tvWorkTitle"-->
+<!--                android:drawableEnd="@drawable/ic_edit"-->
+<!--                android:drawablePadding="30dp"-->
+<!--                android:paddingRight="10dp"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="15dp"-->
+<!--                android:textStyle="bold" />-->
+
+            <TextView
+                android:id="@+id/tvWork"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvPhoneTitle"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginEnd="40dp"
+                android:layout_toRightOf="@id/tvWorkTitle"
+                android:drawablePadding="30dp"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvFamilyTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvWorkTitle"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="45dp"
+                android:text="Family Members : "
+                android:textAlignment="center"
+                android:textColor="@color/thirdColor"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvEditFamily"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/tvWorkTitle"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_marginTop="45dp"-->
+<!--                android:layout_toRightOf="@id/tvFamilyTitle"-->
+<!--                android:drawableEnd="@drawable/ic_edit"-->
+<!--                android:drawablePadding="30dp"-->
+<!--                android:paddingRight="10dp"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="15dp"-->
+<!--                android:textStyle="bold" />-->
+
+            <TextView
+                android:id="@+id/tvFamily"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvWorkTitle"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginEnd="40dp"
+                android:layout_toRightOf="@id/tvFamilyTitle"
+                android:drawablePadding="30dp"
+                android:text="helo"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <!--            <Button-->
+            <!--                android:id="@+id/btBack"-->
+            <!--                android:layout_width="180dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginLeft="10dp"-->
+            <!--                android:layout_marginTop="50dp"-->
+            <!--                android:layout_below="@id/"-->
+            <!--                android:layout_centerHorizontal="true"-->
+            <!--                android:backgroundTint="#26B6B5"-->
+            <!--                android:text="Update"-->
+            <!--                android:textColor="@color/white" />-->
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>
