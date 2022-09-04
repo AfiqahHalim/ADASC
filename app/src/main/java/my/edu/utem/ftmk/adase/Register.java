@@ -191,6 +191,66 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
         String uBirthDate = date;
         String uAddress = address.getText().toString().trim();
 
+        if (fullName.isEmpty()) {
+            fName.setError("Full name is required !");
+            fName.requestFocus();
+            return;
+        }
+
+        if (icNum.isEmpty()) {
+            iC.setError("IC number is required !");
+            iC.requestFocus();
+            return;
+        }
+
+        if (!icNum.matches("[0-9]+")) {
+            iC.setError("Please enter a valid IC number !");
+            iC.requestFocus();
+            return;
+        }
+
+        if (phoneNum.isEmpty()) {
+            phone.setError("Phone number is required !");
+            phone.requestFocus();
+            return;
+        }
+
+        if (!phoneNum.matches("[0-9]+")) {
+            phone.setError("Please enter a valid phone number !");
+            phone.requestFocus();
+            return;
+        }
+
+        if (eMail.isEmpty()) {
+            email.setError("Email is required !");
+            email.requestFocus();
+            return;
+        }
+
+        if (!Patterns.EMAIL_ADDRESS.matcher(eMail).matches()) {
+            email.setError("Please enter a valid email !");
+            email.requestFocus();
+            return;
+        }
+
+        if (uRole.isEmpty()) {
+            etRole.setError("Please choose one role !");
+            etRole.requestFocus();
+            return;
+        }
+
+        if (uAddress.isEmpty()) {
+            address.setError("Home address is required !");
+            address.requestFocus();
+            return;
+        }
+
+        if (pass.isEmpty()) {
+            password.setError("Password is required !");
+            password.requestFocus();
+            return;
+        }
+
         Log.e("birthdate", " " + date);
 
         user.put("fullname",fullName);

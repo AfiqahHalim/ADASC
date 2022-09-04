@@ -77,31 +77,23 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         eMail = email.getText().toString().trim();
         String pass = password.getText().toString().trim();
 
-//        if (eMail.isEmpty()) {
-//            email.setError("Email is required!");
-//            email.requestFocus();
-//            return;
-//        }
-//
-//        if (!Patterns.EMAIL_ADDRESS.matcher(eMail).matches()) {
-//            email.setError("Please enter a valid email!");
-//            email.requestFocus();
-//            return;
-//        }
-//
-//        if (pass.isEmpty()) {
-//            password.setError("Password is required!");
-//            password.requestFocus();
-//            return;
-//        }
-//
-//        if (pass.length() < 8) {
-//            password.setError("Minimum password required is 8 characters");
-//            password.requestFocus();
-//            return;
-//        }
+        if (eMail.isEmpty()) {
+            email.setError("Email is required !");
+            email.requestFocus();
+            return;
+        }
 
+        if (!Patterns.EMAIL_ADDRESS.matcher(eMail).matches()) {
+            email.setError("Please enter a valid email !");
+            email.requestFocus();
+            return;
+        }
 
+        if (pass.isEmpty()) {
+            password.setError("Password is required !");
+            password.requestFocus();
+            return;
+        }
 
         mAuth.signInWithEmailAndPassword(eMail, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>()
         {
@@ -117,7 +109,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
                     startActivity(intent);
 
                 } else {
-                    Toast.makeText(Login.this, "Failed to login, please check your data", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Login.this, "Failed to login, please insert a valid email address and password", Toast.LENGTH_LONG).show();
                 }
 
             }

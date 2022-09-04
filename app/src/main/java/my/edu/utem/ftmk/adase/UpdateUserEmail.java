@@ -110,7 +110,7 @@ public class UpdateUserEmail extends AppCompatActivity {
                             Intent intent = new Intent(getApplicationContext(),UserProfile.class);
                             startActivity(intent);
 
-                            Toast.makeText(UpdateUserEmail.this, "Email updated successfully.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(UpdateUserEmail.this, "Email has been successfully updated.", Toast.LENGTH_SHORT).show();
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {

@@ -18,11 +18,11 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
-public class JalanJasmin extends AppCompatActivity {
+public class ReportMeetingsList extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    ArrayList<ModelCommunityList> modelCommunityListArrayList;
-    CommunityListAdapter communityListAdapter;
+    ArrayList<ModelReportMeetingsList> modelReportMeetingsListArrayList;
+    ReportMeetingsListAdapter reportMeetingsListAdapter;
     FirebaseFirestore database;
 
     ProgressDialog progressDialog;
@@ -30,31 +30,31 @@ public class JalanJasmin extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_jalan_jasmin);
+        setContentView(R.layout.activity_report_meetings_list);
 
         progressDialog = new ProgressDialog(this);
         progressDialog.setCancelable(false);
         progressDialog.setMessage("Fetching Data...");
         progressDialog.show();
 
-        recyclerView = findViewById(R.id.rvCommunityList);
+        recyclerView = findViewById(R.id.rvReportMeetingList);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         database = FirebaseFirestore.getInstance();
-        modelCommunityListArrayList = new ArrayList<ModelCommunityList>();
-        communityListAdapter = new CommunityListAdapter(JalanJasmin.this, modelCommunityListArrayList);
+        modelReportMeetingsListArrayList = new ArrayList<ModelReportMeetingsList>();
+        reportMeetingsListAdapter = new ReportMeetingsListAdapter(ReportMeetingsList.this, modelReportMeetingsListArrayList);
 
-        recyclerView.setAdapter(communityListAdapter);
+        recyclerView.setAdapter(reportMeetingsListAdapter);
 
         EventChangeListener();
+
     }
 
     private void EventChangeListener() {
 
-        database.collection("community")
-                .whereEqualTo("street", "Jalan Jasmin")
-                .orderBy("fullname", Query.Direction.ASCENDING)
+        database.collection("reportForMeetings")
+                .orderBy("meetingDate", Query.Direction.DESCENDING)
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
                     @Override
                     public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
@@ -71,10 +71,10 @@ public class JalanJasmin extends AppCompatActivity {
 
                             if (dc.getType() == DocumentChange.Type.ADDED){
 
-                                modelCommunityListArrayList.add(dc.getDocument().toObject(ModelCommunityList.class));
+                                modelReportMeetingsListArrayList.add(dc.getDocument().toObject(ModelReportMeetingsList.class));
                             }
 
-                            communityListAdapter.notifyDataSetChanged();
+                            reportMeetingsListAdapter.notifyDataSetChanged();
 
                             if(progressDialog.isShowing())
                                 progressDialog.dismiss();
@@ -83,5 +83,6 @@ public class JalanJasmin extends AppCompatActivity {
 
                     }
                 });
+
     }
 }

@@ -2,11 +2,16 @@ package my.edu.utem.ftmk.adase;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.app.TimePickerDialog;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -61,9 +66,28 @@ public class DatePicker extends AppCompatActivity {
         btTimePicker = findViewById(R.id.btTimePicker);
 
         btSave = findViewById(R.id.btSave);
+
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            NotificationChannel channel = new NotificationChannel("Meeting Notification", "Meeting Notification", NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationManager manager = getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(channel);
+        }
+
+
         btSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                //Notification code
+                NotificationCompat.Builder builder = new NotificationCompat.Builder(DatePicker.this, "Meeting Notification");
+                builder.setContentTitle("Meeting Notification");
+                builder.setContentText("New Meeting Was Created, Check The Meeting Details...");
+                builder.setSmallIcon(R.drawable.logo);
+                builder.setAutoCancel(true);
+
+                NotificationManagerCompat managerCompat = NotificationManagerCompat.from(DatePicker.this);
+                managerCompat.notify(1,builder.build());
+
                 addMeeting();
             }
         });

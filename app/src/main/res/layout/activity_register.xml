@@ -22,7 +22,7 @@
                 android:id="@+id/tvSignUp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="SIGN UP"
+                android:text="REGISTER FORM"
                 android:textStyle="bold"
                 android:typeface="monospace"
                 android:fontFamily="sans-serif-black"
@@ -54,7 +54,7 @@
                     android:id="@+id/etFName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Enter your full name"
+                    android:hint="Full name ( as in your IC )"
                     android:textColorHint="@color/hint"
                     android:textColor="@color/black"
                     android:padding="10dp" />
@@ -74,7 +74,7 @@
                     android:id="@+id/etIC"
                     android:layout_width="350dp"
                     android:layout_height="wrap_content"
-                    android:hint="Enter your ic number"
+                    android:hint="IC number ( without '-' )"
                     android:textColor="@color/black"
                     android:padding="10dp" />
 
@@ -93,7 +93,7 @@
                     android:id="@+id/etPhone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Enter your phone number"
+                    android:hint="Phone number ( without '-' )"
                     android:textColor="@color/black"
                     android:padding="10dp" />
 
@@ -112,7 +112,7 @@
                     android:id="@+id/etEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Enter your email"
+                    android:hint="Email ( enter a valid email '@gmail.com' )"
                     app:boxStrokeColor="@color/black"
                     android:textColor="@color/black"
                     android:padding="10dp" />
@@ -151,7 +151,7 @@
                     android:id="@+id/etAddress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Enter your address"
+                    android:hint="Home address"
                     app:boxStrokeColor="@color/black"
                     android:textColor="@color/black"
                     android:padding="10dp" />
@@ -166,7 +166,7 @@
                 android:layout_marginLeft="28dp"
                 android:layout_marginTop="5dp"
                 android:onClick="openBirthDatePicker"
-                android:text="Select your birth date"
+                android:text="Date of birth"
                 android:textColor="@color/hint"
                 app:boxStrokeColor="#FF009688"
                 android:textSize="16sp" />
@@ -184,7 +184,7 @@
                     android:id="@+id/etPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Enter your password"
+                    android:hint="Password"
                     android:padding="10dp"
                     android:inputType="textPassword"
                     android:textColor="@color/black"

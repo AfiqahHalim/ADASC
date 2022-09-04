@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ADASE">
         <activity
+            android:name=".ReportMeetingsList"
+            android:exported="false" />
+        <activity
+            android:name=".BarChartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ReportMeetings"
+            android:exported="false" />
+        <activity
             android:name=".AgeChart"
             android:exported="false" />
         <activity

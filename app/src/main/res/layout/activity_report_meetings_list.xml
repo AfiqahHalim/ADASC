@@ -24,15 +24,15 @@
                 android:layout_centerHorizontal="true"
                 android:layout_weight="1"
                 android:padding="20dp"
-                android:text="NIGHT GUARD'S REPORT LIST"
+                android:text="Report For Post-Meetings List"
                 android:textAlignment="center"
                 android:layout_gravity="center"
                 android:textColor="@color/thirdColor"
                 android:textSize="20sp" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvReportNGList"
-                tools:listitem="@layout/report_night_guard_row"
+                android:id="@+id/rvReportMeetingList"
+                tools:listitem="@layout/report_meetings_list_row"
                 android:layout_below="@id/titleTv"
                 android:layout_marginTop="5dp"
                 android:layout_width="match_parent"

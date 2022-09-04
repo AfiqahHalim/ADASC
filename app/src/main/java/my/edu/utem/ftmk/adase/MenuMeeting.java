@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class MenuMeeting extends AppCompatActivity implements View.OnClickListener{
 
-    private Button btNewMeeting, btMeetingHistory, btMainMenu;
+    private Button btNewMeeting, btMeetingHistory, btNewReport, btMainMenu, btReportList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,12 @@ public class MenuMeeting extends AppCompatActivity implements View.OnClickListen
 
         btMeetingHistory = (Button) findViewById(R.id.btMeetingHistory);
         btMeetingHistory.setOnClickListener(this);
+
+        btNewReport = (Button) findViewById(R.id.btNewReport);
+        btNewReport.setOnClickListener(this);
+
+        btReportList = (Button) findViewById(R.id.btReportList);
+        btReportList.setOnClickListener(this);
 
         btMainMenu = (Button) findViewById(R.id.btMainMenu);
         btMainMenu.setOnClickListener(this);
@@ -35,6 +41,12 @@ public class MenuMeeting extends AppCompatActivity implements View.OnClickListen
                 break;
             case R.id.btMeetingHistory:
                 startActivity(new Intent(MenuMeeting.this, MeetingList.class));
+                break;
+            case R.id.btNewReport:
+                startActivity(new Intent(MenuMeeting.this, ReportMeetings.class));
+                break;
+            case R.id.btReportList:
+                startActivity(new Intent(MenuMeeting.this, ReportMeetingsList.class));
                 break;
             case R.id.btMainMenu:
                 startActivity(new Intent(MenuMeeting.this, UserMenu.class));

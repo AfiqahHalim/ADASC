@@ -110,7 +110,7 @@ public class UpdateUserIC extends AppCompatActivity {
                             Intent intent = new Intent(getApplicationContext(), UserProfile.class);
                             startActivity(intent);
 
-                            Toast.makeText(UpdateUserIC.this, "IC updated successfully.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(UpdateUserIC.this, "IC number has been successfully updated.", Toast.LENGTH_SHORT).show();
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {

@@ -45,46 +45,53 @@
                 android:text="ccc"
                 android:textSize="12dp"/>
 
-            <TextView
-                android:id="@+id/tvStreet"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="aaa"
-                android:textColor="@color/black"
-                android:visibility="gone"/>
+            <ImageView
+                android:id="@+id/delete"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/delete"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="330dp"/>
 
-            <TextView
-                android:id="@+id/tvPhone"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="aaa"
-                android:textColor="@color/black"
-                android:visibility="gone"/>
+<!--            <TextView-->
+<!--                android:id="@+id/tvStreet"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="aaa"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:visibility="gone"/>-->
 
-            <TextView
-                android:id="@+id/tvGender"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="aaa"
-                android:textColor="@color/black"
-                android:visibility="gone"/>
+<!--            <TextView-->
+<!--                android:id="@+id/tvPhone"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="aaa"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:visibility="gone"/>-->
 
-            <TextView
-                android:id="@+id/tvWork"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="aaa"
-                android:textColor="@color/black"
-                android:visibility="gone"/>
+<!--            <TextView-->
+<!--                android:id="@+id/tvGender"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="aaa"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:visibility="gone"/>-->
 
-            <TextView
-                android:id="@+id/tvFamily"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="aaa"
-                android:textColor="@color/black"
-                android:visibility="gone"/>
+<!--            <TextView-->
+<!--                android:id="@+id/tvWork"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="aaa"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:visibility="gone"/>-->
 
+<!--            <TextView-->
+<!--                android:id="@+id/tvFamily"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="aaa"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:visibility="gone"/>-->
 
 
         </LinearLayout>

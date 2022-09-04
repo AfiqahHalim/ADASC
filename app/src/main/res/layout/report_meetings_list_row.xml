@@ -23,6 +23,10 @@
             android:layout_marginLeft="10dp"
             android:orientation="vertical">
 
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
             <TextView
                 android:id="@+id/tvDate"
                 android:layout_width="match_parent"
@@ -33,24 +37,53 @@
                 android:textSize="17dp"/>
 
             <TextView
-                android:id="@+id/tvCrime"
+                android:id="@+id/tvVenue"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="bbb"
                 android:textSize="12dp"/>
 
+            <LinearLayout
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
             <TextView
-                android:id="@+id/tvStreet"
+                android:id="@+id/tvStart"
+                android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ccc"
+                android:text="xxx"
                 android:textSize="12dp"/>
 
             <TextView
-                android:id="@+id/tvNickname"
+                android:id="@+id/tvEnd"
+                android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="eee"
+                android:layout_marginLeft="100dp"
+                android:text="yyy"
+                android:textSize="12dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvAgendas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ccc"
+                android:layout_marginTop="10dp"
+                android:textSize="12dp"/>
+
+            <TextView
+                android:id="@+id/tvReportedBy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="ddd"
                 android:textSize="12dp"/>
 
         </LinearLayout>
@@ -64,4 +97,4 @@
         android:layout_marginTop="15dp"
         android:background="@color/mainColor"/>
 
-</LinearLayout>
+    </LinearLayout>

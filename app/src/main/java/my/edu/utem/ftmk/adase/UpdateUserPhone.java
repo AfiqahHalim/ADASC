@@ -110,7 +110,7 @@ public class UpdateUserPhone extends AppCompatActivity {
                             Intent intent = new Intent(getApplicationContext(),UserProfile.class);
                             startActivity(intent);
 
-                            Toast.makeText(UpdateUserPhone.this, "Phone updated successfully.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(UpdateUserPhone.this, "Phone number has been successfully updated.", Toast.LENGTH_SHORT).show();
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {

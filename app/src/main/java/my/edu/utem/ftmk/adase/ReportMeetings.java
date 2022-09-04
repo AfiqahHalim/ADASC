@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,7 +15,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -30,52 +31,55 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
-public class ReportNightGuard extends AppCompatActivity implements View.OnClickListener {
+public class ReportMeetings extends AppCompatActivity implements View.OnClickListener{
 
-    private EditText etNickName;
-    private Button btSave, btDateOccur;
+    private EditText etName, etPostReport;
+    private Button btDate, btStarting, btEnding, btSave;
     private DatePickerDialog datePickerDialog;
-    private TextView tvName;
-    Map<String, Object> reportNightGuard = new HashMap<>();
     private FirebaseAuth mAuth;
     private FirebaseUser user;
     private DatabaseReference reference;
     private String userID;
+    Map<String, Object> reportMeetings = new HashMap<>();
 
     String date;
+    int hour1, minute1, hour2, minute2;
     FirebaseFirestore db;
 
-    String[] report = {"House Robbery", "Theft", "Drug", "Drunk", "Accident", "Harassment"};
-//    String[] group = {"Group A", "Group B", " Group C", "Group D"};
-    String[] street = {"Jalan Jasmin", "Jalan Lavendar", "Jalan Matahari", "Jalan Melur", "Jalan Orkid"};
+    String[] venue = {"Balai Raya Kahang Timur", "Dewan Kahang Timur"};
 
-    AutoCompleteTextView acReport, acStreet, acGroup;
+    AutoCompleteTextView acVenue;
 
-    ArrayAdapter<String> adapterReport, adapterStreet, adapterGroup;
+    ArrayAdapter<String> adapterVenue;
 
     FirebaseFirestore firebaseFirestore = FirebaseFirestore.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_report_night_guard);
+        setContentView(R.layout.activity_report_meetings);
         initDatePicker();
 
         db = FirebaseFirestore.getInstance();
 
         mAuth = FirebaseAuth.getInstance();
 
-        etNickName = (EditText) findViewById(R.id.etNickName);
-        tvName = (TextView) findViewById(R.id.tvName);
-
         btSave = (Button) findViewById(R.id.btSave);
         btSave.setOnClickListener(this);
 
-        btDateOccur = (Button) findViewById(R.id.btDateOccur);
+        btDate = (Button) findViewById(R.id.btDate);
 
-//        String nickname = etNickName.toString();
+        etName = findViewById(R.id.etName);
+        etName.setOnClickListener(this);
+
+        etPostReport = findViewById(R.id.etPostReport);
+        etPostReport.setOnClickListener(this);
+
+        btStarting = findViewById(R.id.btStarting);
+        btEnding = findViewById(R.id.btEnding);
 
         DocumentReference docRef = db.collection("users").document(FirebaseAuth.getInstance().getCurrentUser().getUid());
         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -86,7 +90,7 @@ public class ReportNightGuard extends AppCompatActivity implements View.OnClickL
                     if (document.exists()) {
                         Log.d("ProfileActivity", "DocumentSnapshot data: " + document.getData());
 
-                        etNickName.setText(document.getData().get("fullname").toString());
+                        etName.setText(document.getData().get("fullname").toString());
                     } else {
                         Log.d("ProfileActivity", "No such document");
                     }
@@ -96,42 +100,20 @@ public class ReportNightGuard extends AppCompatActivity implements View.OnClickL
             }
         });
 
-        acReport = findViewById(R.id.acReport);
-        adapterReport = new ArrayAdapter<String>(this, R.layout.list_role, report);
-        acReport.setAdapter(adapterReport);
-        acReport.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        acVenue = findViewById(R.id.acVenue);
+        adapterVenue = new ArrayAdapter<String>(this, R.layout.list_role, venue);
+        acVenue.setAdapter(adapterVenue);
+        acVenue.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String report = parent.getItemAtPosition(position).toString();
-                Toast.makeText(getApplicationContext(), "Report : " + report, Toast.LENGTH_SHORT);
+                Toast.makeText(getApplicationContext(), "Venue : " + report, Toast.LENGTH_SHORT);
             }
         });
-
-        acStreet = findViewById(R.id.acStreet);
-        adapterStreet = new ArrayAdapter<String>(this, R.layout.list_role, street);
-        acStreet.setAdapter(adapterStreet);
-        acStreet.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String street = parent.getItemAtPosition(position).toString();
-                Toast.makeText(getApplicationContext(), "Street : " + street, Toast.LENGTH_SHORT);
-            }
-        });
-
-//        acGroup = findViewById(R.id.acGroup);
-//        adapterGroup = new ArrayAdapter<String>(this, R.layout.list_role, group);
-//        acGroup.setAdapter(adapterGroup);
-//        acGroup.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                String group = parent.getItemAtPosition(position).toString();
-//                Toast.makeText(getApplicationContext(), "Group : " + group, Toast.LENGTH_SHORT);
-//            }
-//        });
 
     }
 
-    private String dateReport() {
+    private String dateMeeting() {
 
         Calendar calendar = Calendar.getInstance();
         int year = calendar.get(Calendar.YEAR);
@@ -178,6 +160,11 @@ public class ReportNightGuard extends AppCompatActivity implements View.OnClickL
         return "January";
     }
 
+    public void openDate(View view) {
+
+        datePickerDialog.show();
+    }
+
     private void initDatePicker() {
 
         DatePickerDialog.OnDateSetListener dateSetListener = new DatePickerDialog.OnDateSetListener() {
@@ -187,7 +174,7 @@ public class ReportNightGuard extends AppCompatActivity implements View.OnClickL
                 month = month + 1;
                 date = makeDateString(day, month, year);
 
-                btDateOccur.setText(date);
+                btDate.setText(date);
 
                 Log.e("date", date);
             }
@@ -204,8 +191,48 @@ public class ReportNightGuard extends AppCompatActivity implements View.OnClickL
         //datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
     }
 
-    public void openDateOccur(View view) {
-        datePickerDialog.show();
+    public void startingTime(View view) {
+
+        TimePickerDialog.OnTimeSetListener onTimeSetListener = new TimePickerDialog.OnTimeSetListener() {
+            @Override
+            public void onTimeSet(TimePicker view, int selectedHour, int selectedMinute) {
+
+                hour1 = selectedHour;
+                minute1 = selectedMinute;
+                btStarting.setText(String.format(Locale.getDefault(), "%02d:%02d", hour1, minute1));
+
+                Log.e("time", "" + hour1 + minute1);
+            }
+        };
+
+        int style = AlertDialog.THEME_HOLO_DARK;
+
+        TimePickerDialog timePickerDialog = new TimePickerDialog(this, style, onTimeSetListener, hour1, minute1, true);
+
+        timePickerDialog.setTitle("Select The Starting Time :");
+        timePickerDialog.show();
+    }
+
+    public void endingTime(View view) {
+
+        TimePickerDialog.OnTimeSetListener onTimeSetListener = new TimePickerDialog.OnTimeSetListener() {
+            @Override
+            public void onTimeSet(TimePicker view, int selectedHour, int selectedMinute) {
+
+                hour2 = selectedHour;
+                minute2 = selectedMinute;
+                btStarting.setText(String.format(Locale.getDefault(), "%02d:%02d", hour2, minute2));
+
+                Log.e("time", "" + hour2 + minute2);
+            }
+        };
+
+        int style = AlertDialog.THEME_HOLO_DARK;
+
+        TimePickerDialog timePickerDialog = new TimePickerDialog(this, style, onTimeSetListener, hour2, minute2, true);
+
+        timePickerDialog.setTitle("Select The Ending Time :");
+        timePickerDialog.show();
     }
 
     @Override
@@ -219,29 +246,31 @@ public class ReportNightGuard extends AppCompatActivity implements View.OnClickL
 
     private void addReport() {
 
-        String dateOccur = date;
-        String reportCrime = acReport.getText().toString().trim();
-//        String group = acGroup.getText().toString().trim();
-        String street = acStreet.getText().toString().trim();
-        String nickname = etNickName.getText().toString().trim();
+        String meetingDate = date;
+        String meetingVenue = acVenue.getText().toString().trim();
+        String startTime = String.format("%02d", hour1) + ":" + String.format("%02d", minute1);
+        String endTime = String.format("%02d", hour2) + ":" + String.format("%02d", minute2);
+        String meetingReport = etPostReport.getText().toString().trim();
+        String fullName = etName.getText().toString().trim();
 
-        Log.e("dateoccur", " " + date);
+        Log.e("date", " " + date);
 
-        reportNightGuard.put("dateOccur",dateOccur);
-        reportNightGuard.put("reportCrime",reportCrime);
-//        reportNightGuard.put("group",group);
-        reportNightGuard.put("street",street);
-        reportNightGuard.put("name", nickname);
+        reportMeetings.put("meetingDate",meetingDate);
+        reportMeetings.put("reportVenue",meetingVenue);
+        reportMeetings.put("startingTime",startTime);
+        reportMeetings.put("endingTime", endTime);
+        reportMeetings.put("report", meetingReport);
+        reportMeetings.put("reportedBy", fullName);
 
-        db.collection("report")
-                .add(reportNightGuard)
+        db.collection("reportForMeetings")
+                .add(reportMeetings)
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
                         //Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
                         Toast.makeText(getApplicationContext(), "New data insert succeessfully.",
                                 Toast.LENGTH_SHORT).show();
-                        toNightGuardMenu();
+                        toMeetingMenu();
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
@@ -252,8 +281,8 @@ public class ReportNightGuard extends AppCompatActivity implements View.OnClickL
                 });
     }
 
-    private void toNightGuardMenu() {
-        Intent intent = new Intent(getApplicationContext(), MenuNightGuard.class);
+    private void toMeetingMenu() {
+        Intent intent = new Intent(getApplicationContext(), MenuMeeting.class);
         startActivity(intent);
     }
 

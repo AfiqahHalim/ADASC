@@ -44,7 +44,7 @@
                     android:id="@+id/etFName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Full Name"
+                    android:hint="Full Name ( as in IC )"
                     android:padding="10dp"
                     android:textColor="@color/black"
                     android:textColorHint="@color/hint" />
@@ -62,7 +62,7 @@
                         android:id="@+id/etPhone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Phone Number"
+                        android:hint="Phone Number ( without '-' )"
                         android:textColorHint="@color/hint"
                         android:textColor="@color/black"
                         android:padding="10dp" />
@@ -82,7 +82,7 @@
                         android:id="@+id/etHouse"
                         android:layout_width="350dp"
                         android:layout_height="wrap_content"
-                        android:hint="House No"
+                        android:hint="House No ( numbers only )"
                         android:textColor="@color/black"
                         android:padding="10dp" />
 
@@ -120,7 +120,7 @@
                         android:id="@+id/etAge"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Age"
+                        android:hint="Age ( numbers only )"
                         android:textColor="@color/black"
                         android:padding="10dp" />
 
@@ -145,22 +145,20 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="350dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="5dp"
                     android:textColorHint="@color/hint"
-                    app:boxStrokeColor="#FF009688">
+                    app:boxStrokeColor="#FF009688"
+                    android:hint="@string/selectWork"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
 
-                    <EditText
+                    <AutoCompleteTextView
                         android:id="@+id/etWork"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Work"
-                        app:boxStrokeColor="@color/black"
-                        android:textColor="@color/black"
-                        android:padding="10dp" />
+                        android:layout_height="60dp"
+                        app:boxStrokeColor="@color/black" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -177,7 +175,7 @@
                         android:id="@+id/etFamMembers"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Family Members"
+                        android:hint="Family Members ( numbers only )"
                         app:boxStrokeColor="@color/black"
                         android:textColor="@color/black"
                         android:padding="10dp" />

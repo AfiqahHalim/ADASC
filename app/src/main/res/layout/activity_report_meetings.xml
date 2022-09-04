@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor"
+    android:padding="4dp"
+    tools:context=".ReportMeetings">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="REPORT FOR POST-MEETING"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:typeface="monospace"
+                android:fontFamily="sans-serif-black"
+                android:textSize="40sp"
+                android:textColor="@color/thirdColor"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"/>
+
+            <Button
+                android:id="@+id/btDate"
+                style="?android:spinnerStyle"
+                android:layout_width="351dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="20dp"
+                android:onClick="openDate"
+                android:text="Date "
+                android:textColor="@color/hint"
+                android:textSize="16sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="350dp"
+                android:layout_height="67dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:hint="@string/selectVenue"
+                android:textColorHint="@color/hint"
+                app:boxStrokeColor="#FF009688">
+
+                <AutoCompleteTextView
+                    android:id="@+id/acVenue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvStartingTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Start Time :"
+                android:textColor="@color/hint"
+                android:textSize="15sp"
+                android:layout_marginLeft="43dp">
+            </TextView>
+
+            <Button
+                android:id="@+id/btStarting"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#FF018786"
+                android:text="Select Time"
+                android:textColor="@color/white"
+                android:onClick="startingTime"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.491"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvTime"
+                app:layout_constraintVertical_bias="0.116" />
+
+            <TextView
+                android:id="@+id/tvEndingTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="End Time :"
+                android:textColor="@color/hint"
+                android:textSize="15sp"
+                android:layout_marginLeft="43dp">
+            </TextView>
+
+            <Button
+                android:id="@+id/btEnding"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#FF018786"
+                android:text="Select Time"
+                android:textColor="@color/white"
+                android:onClick="endingTime"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.491"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvTime"
+                app:layout_constraintVertical_bias="0.116" />
+
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+
+<!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"-->
+<!--                android:layout_width="350dp"-->
+<!--                android:layout_height="67dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:hint="Start at "-->
+<!--                android:textColorHint="@color/hint"-->
+<!--                app:boxStrokeColor="#FF009688">-->
+
+<!--                <AutoCompleteTextView-->
+<!--                    android:id="@+id/acMeetingStart"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:inputType="none"-->
+<!--                    "/>-->
+
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+            <!--            <com.google.android.material.textfield.TextInputLayout-->
+
+            <!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"-->
+            <!--                android:layout_width="350dp"-->
+            <!--                android:layout_height="67dp"-->
+            <!--                android:layout_gravity="center"-->
+            <!--                android:layout_marginTop="20dp"-->
+            <!--                android:hint="@string/selectGroup"-->
+            <!--                android:textColorHint="@color/hint"-->
+            <!--                app:boxStrokeColor="#FF009688">-->
+
+            <!--                <AutoCompleteTextView-->
+            <!--                    android:id="@+id/acGroup"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:inputType="none"/>-->
+
+            <!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="350dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:lines="6"
+                android:inputType="textMultiLine"
+                android:layout_marginTop="8dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="18dp"
+                android:textColorHint="@color/black"
+                app:boxStrokeColor="#FFC700">
+
+                <EditText
+                    android:id="@+id/etPostReport"
+                    android:layout_width="320dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/backgroundside"
+                    android:hint="Type your post report for meeting here :"
+                    android:lines="6"
+                    android:maxLines="4"
+                    android:inputType="textMultiLine"
+                    android:padding="2dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hint"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textColorHint="@color/hint"
+                app:boxStrokeColor="#FF009688">
+
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Reported by : "
+                    android:textColorHint="@color/black"
+                    android:textColor="@color/black"
+                    android:padding="10dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btSave"
+                android:layout_width="230dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#FF018786"
+                android:text="Save"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

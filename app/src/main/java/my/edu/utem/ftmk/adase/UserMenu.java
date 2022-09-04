@@ -61,7 +61,7 @@ public class UserMenu extends AppCompatActivity implements View.OnClickListener{
                 startActivity(new Intent(UserMenu.this, MenuCommittee.class));
                 break;
             case R.id.btStatistic:
-                startActivity(new Intent(UserMenu.this, AgeChart.class));
+                startActivity(new Intent(UserMenu.this, BarChartActivity.class));
                 break;
             case R.id.btLogout:
                 btLogout.setOnClickListener(new View.OnClickListener() {

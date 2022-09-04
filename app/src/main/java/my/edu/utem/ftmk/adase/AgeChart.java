@@ -46,28 +46,26 @@ public class AgeChart extends AppCompatActivity {
 
         ageBarChart();
 
-
-
         //DatabaseReference databaseReference = FirebaseFirestore.getReference("community");
 
-//        ArrayList<BarEntry> barEntries = new ArrayList<>();
-//
-//        for (int i=1; i<8; i++) {
-//
-//            float value = (float) (i*10.0);
-//            BarEntry barEntry = new BarEntry(i,value);
-//            barEntries.add(barEntry);
-//        }
+        ArrayList<BarEntry> barEntries = new ArrayList<>();
+
+        for (int i=1; i<8; i++) {
+
+            float value = (float) (i*10.0);
+            BarEntry barEntry = new BarEntry(i,value);
+            barEntries.add(barEntry);
+        }
 
 
-//        BarDataSet barDataSet = new BarDataSet(barEntries, "Age");
-//        barDataSet.setColors(ColorTemplate.COLORFUL_COLORS);
-//        barDataSet.setDrawValues(false);
-//        barChart.setData(new BarData(barDataSet));
-//        barChart.animateY(5000);
-//        barChart.getDescription().setText("Community's Age");
-//        barChart.getDescription().setTextColor(Color.BLACK);
-//        barChart.getDescription().setTextSize(20);
+        BarDataSet barDataSet = new BarDataSet(barEntries, "Age");
+        barDataSet.setColors(ColorTemplate.COLORFUL_COLORS);
+        barDataSet.setDrawValues(false);
+        barChart.setData(new BarData(barDataSet));
+        barChart.animateY(5000);
+        barChart.getDescription().setText("Community's Age");
+        barChart.getDescription().setTextColor(Color.BLACK);
+        barChart.getDescription().setTextSize(20);
     }
 
     private void ageBarChart() {

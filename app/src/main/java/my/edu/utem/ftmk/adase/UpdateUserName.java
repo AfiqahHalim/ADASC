@@ -110,7 +110,7 @@ public class UpdateUserName extends AppCompatActivity {
                             Intent intent = new Intent(getApplicationContext(),UserProfile.class);
                             startActivity(intent);
 
-                            Toast.makeText(UpdateUserName.this, "Name updated successfully.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(UpdateUserName.this, "Name has been successfully updated.", Toast.LENGTH_SHORT).show();
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {

@@ -48,6 +48,28 @@
         android:textColor="@color/white"
         android:textStyle="bold" />
 
+    <Button
+        android:id="@+id/btNewReport"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#FF018786"
+        android:text="Add New Report for Post-Meeting"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btReportList"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#FF018786"
+        android:text="Report list"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
         <Button
             android:id="@+id/btMainMenu"
             android:layout_width="250dp"

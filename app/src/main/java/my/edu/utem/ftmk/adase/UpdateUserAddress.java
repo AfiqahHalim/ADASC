@@ -104,7 +104,7 @@ public class UpdateUserAddress extends AppCompatActivity {
                             Intent intent = new Intent(getApplicationContext(), UserProfile.class);
                             startActivity(intent);
 
-                            Toast.makeText(UpdateUserAddress.this, "Address updated successfully.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(UpdateUserAddress.this, "Address has been successfully updated.", Toast.LENGTH_SHORT).show();
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {

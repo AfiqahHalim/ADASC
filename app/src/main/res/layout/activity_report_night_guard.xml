@@ -113,7 +113,7 @@
                     android:id="@+id/etNickName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Fullname"
+                    android:hint="Reported by : "
                     android:textColorHint="@color/black"
                     android:textColor="@color/black"
                     android:padding="10dp" />
