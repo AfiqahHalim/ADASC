@@ -26,7 +26,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
-public class CommunityList extends AppCompatActivity implements View.OnClickListener{
+public class CommunityList extends AppCompatActivity{
 
     RecyclerView recyclerView;
     ArrayList<ModelCommunityList> modelCommunityListArrayList;
@@ -62,7 +62,7 @@ public class CommunityList extends AppCompatActivity implements View.OnClickList
 
         recyclerView.setAdapter(communityListAdapter);
 
-        findViewById(R.id.delete).setOnClickListener(this);
+//        findViewById(R.id.delete).setOnClickListener(this);
 
         EventChangeListener();
     }
@@ -101,50 +101,51 @@ public class CommunityList extends AppCompatActivity implements View.OnClickList
                 });
     }
 
-    private void deleteCommunity() {
-
-        db.collection("community").document(modelCommunityList.getUid()).delete()
-                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if (task.isSuccessful()) {
-                            Toast.makeText(CommunityList.this, "Community is successfully deleted", Toast.LENGTH_SHORT).show();
-                            finish();
-                            startActivity(new Intent(CommunityList.this, CommunityList.class));
-                        }
-                    }
-                });
-
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.delete:
-
-                AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                builder.setTitle("Delete Community");
-                builder.setMessage("Are your sure want to delete this profile?");
-
-                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        deleteCommunity();
-                    }
-                });
-
-                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-
-                    }
-                });
-
-                AlertDialog txt = builder.create();
-                txt.show();
-
-                break;
-        }
-    }
+//    private void deleteCommunity() {
+//
+//        db.collection("community").document(modelCommunityList.getUid())
+//                .delete()
+//                .addOnCompleteListener(new OnCompleteListener<Void>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<Void> task) {
+//                        if (task.isSuccessful()) {
+//                            Toast.makeText(CommunityList.this, "Community is successfully deleted", Toast.LENGTH_SHORT).show();
+//                            finish();
+//                            startActivity(new Intent(CommunityList.this, CommunityList.class));
+//                        }
+//                    }
+//                });
+//
+//    }
+//
+//    @Override
+//    public void onClick(View v) {
+//        switch (v.getId()) {
+//            case R.id.delete:
+//
+//                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+//                builder.setTitle("Delete Community");
+//                builder.setMessage("Are your sure want to delete this profile?");
+//
+//                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        deleteCommunity();
+//                    }
+//                });
+//
+//                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//
+//                    }
+//                });
+//
+//                AlertDialog txt = builder.create();
+//                txt.show();
+//
+//                break;
+//        }
+//    }
 
 }

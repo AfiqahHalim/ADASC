@@ -71,6 +71,7 @@ public class ReportMeetings extends AppCompatActivity implements View.OnClickLis
         btSave.setOnClickListener(this);
 
         btDate = (Button) findViewById(R.id.btDate);
+        btDate.setText(meetingDate());
 
         etName = findViewById(R.id.etName);
         etName.setOnClickListener(this);
@@ -113,7 +114,7 @@ public class ReportMeetings extends AppCompatActivity implements View.OnClickLis
 
     }
 
-    private String dateMeeting() {
+    private String meetingDate() {
 
         Calendar calendar = Calendar.getInstance();
         int year = calendar.get(Calendar.YEAR);

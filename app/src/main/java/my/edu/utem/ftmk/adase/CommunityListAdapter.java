@@ -1,16 +1,25 @@
 package my.edu.utem.ftmk.adase;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
 
@@ -18,6 +27,8 @@ public class CommunityListAdapter extends RecyclerView.Adapter<CommunityListAdap
 
     Context context;
     ArrayList<ModelCommunityList> modelCommunityListArrayList;
+    private FirebaseFirestore db;
+    String waypointid;
 
     public CommunityListAdapter(Context context, ArrayList<ModelCommunityList> modelCommunityListArrayList) {
         this.context = context;
@@ -39,20 +50,22 @@ public class CommunityListAdapter extends RecyclerView.Adapter<CommunityListAdap
 
         ModelCommunityList modelCommunityList = modelCommunityListArrayList.get(position);
 
-        final String uid = modelCommunityList.getUid();
+
+         String uid = modelCommunityList.getUid();
 
         holder.tvFullName.setText(modelCommunityList.fullname);
         holder.tvHouse.setText("House No : " + (modelCommunityList.house));
         holder.tvAge.setText("Age : " + (modelCommunityList.age));
-        holder.tvStreet.setText("Age : " + (modelCommunityList.street));
-        holder.tvPhone.setText("Age : " + (modelCommunityList.phone));
-        holder.tvWork.setText("Age : " + (modelCommunityList.work));
-        holder.tvGender.setText("Age : " + (modelCommunityList.gender));
-        holder.tvFamily.setText("Age : " + (modelCommunityList.family));
+//        holder.tvStreet.setText("Age : " + (modelCommunityList.street));
+//        holder.tvPhone.setText("Age : " + (modelCommunityList.phone));
+//        holder.tvWork.setText("Age : " + (modelCommunityList.work));
+//        holder.tvGender.setText("Age : " + (modelCommunityList.gender));
+//        holder.tvFamily.setText("Age : " + (modelCommunityList.family));
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
 
                 detailsBottomSheet(modelCommunityList);
 
@@ -79,6 +92,7 @@ public class CommunityListAdapter extends RecyclerView.Adapter<CommunityListAdap
         TextView tvWork = view.findViewById(R.id.tvWork);
         TextView tvGender = view.findViewById(R.id.tvGender);
         TextView tvFamily = view.findViewById(R.id.tvFamily);
+//        ImageView delete = view.findViewById(R.id.delete);
 
         String name = modelCommunityList.getFullname();
         String age = modelCommunityList.getAge();
@@ -88,6 +102,7 @@ public class CommunityListAdapter extends RecyclerView.Adapter<CommunityListAdap
         String work = modelCommunityList.getWork();
         String gender = modelCommunityList.getGender();
         String family = modelCommunityList.getFamily();
+        String uid = modelCommunityList.getUid();
 
         tvName.setText(name);
         tvAge.setText(age);

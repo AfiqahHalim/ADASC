@@ -26,16 +26,16 @@ public class BarChartActivity extends AppCompatActivity {
         BarChart barChart = findViewById(R.id.barChart);
 
         ArrayList<BarEntry> entries = new ArrayList<>();
-        entries.add(new BarEntry(2010,13));
-        entries.add(new BarEntry(2011,11));
-        entries.add(new BarEntry(2012,24));
-        entries.add(new BarEntry(2013,19));
-        entries.add(new BarEntry(2014,12));
-        entries.add(new BarEntry(2015,15));
-        entries.add(new BarEntry(2016,17));
-        entries.add(new BarEntry(2017,12));
+        entries.add(new BarEntry(1,0));
+        entries.add(new BarEntry(2,0));
+        entries.add(new BarEntry(3,0));
+        entries.add(new BarEntry(4,0));
+        entries.add(new BarEntry(5,3));
+        entries.add(new BarEntry(6,15));
+        entries.add(new BarEntry(7,12));
+        entries.add(new BarEntry(8,3));
 
-        BarDataSet barDataSet = new BarDataSet(entries, "Entries");
+        BarDataSet barDataSet = new BarDataSet(entries, "Total of the community");
         barDataSet.setColors(ColorTemplate.MATERIAL_COLORS);
         barDataSet.setValueTextColor(Color.BLACK);
         barDataSet.setValueTextSize(16f);
@@ -44,7 +44,7 @@ public class BarChartActivity extends AppCompatActivity {
 
         barChart.setFitBars(true);
         barChart.setData(barData);
-        barChart.getDescription().setText("Custom Bar Chart Example");
+        barChart.getDescription().setText("");
         barChart.animateY(3000);
     }
 }
